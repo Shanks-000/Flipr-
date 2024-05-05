@@ -1,0 +1,53 @@
+<div id="loginpage" style="display: block;">
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" id="email">
+                        <label for="Email"></label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="pwd">
+                        <label for="Password"></label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember Me</label>
+                        <a href="">Forget Password</a>
+                    </div>
+                    <button type="submit" onclick="login()">Log in</button>
+                    <div class="register">
+                        <p>Don't have a account ?
+                        <div class="a">Register</div>
+                        </p>
+                    </div>
+                </form>
+            </div>
+    </section>
+</div>
+</div>
+
+
+
+<script>
+    const loginForm = document.getElementById('loginpage');
+    const homepageDiv = document.getElementById('homepage');
+
+    function login() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("pwd").value;
+
+        if (email == "shashank" && password == "admin") {
+            alert("Login Successfull");
+            loginForm.style.display = 'none';
+            homepageDiv.style.display = 'block';
+        }
+        else {
+            alert("Invalid Information..!!!!!");
+            return;
+        }
+    }
+</script>
